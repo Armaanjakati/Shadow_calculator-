@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <style>
+    
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    
+    body{
+      width:100vw;
+      height:100vh;
+      background:linear-gradient(45deg,#0a0a0a,#3a4456);
+     /* margin:50% 50%;*/
+      display: flex;
+      justify-content: center;
+      align-items: center
+      
+    }
+    
+    button{
+      font-family: sans-serif;
+      
+    }
+    
+    .calculator{
+      border: 1px solid #717377;
+      border-radius:16px;
+      padding: 5px;
+      background: transparent;
+      box-shadow: 0px 10px 35px rgba(113, 100, 117, 0.8);
+    }
+    
+    input{
+      width:100%
+      border:none;
+      padding:20px;
+      margin:10px;
+      background:transparent;
+      box-shadow:10px 1px 3px 15px rgbs(90,70,80,0.1);
+      font-size:20px;
+      text-align:right;
+      color:#C0C0C0;
+      cursor:pointer;
+    }
+    
+    button{
+      border: none;
+      width:43px;
+      height:60px;
+      margin:10px;
+      background: transparent;
+      /*border-radius:50%;*/
+      box-shadow: -2px -2px 10px rgba(150, 200, 130, 0.4);
+      cursor:pointer;
+      border-radius: 50%;
+    }
+    
+    .equalbtn{
+      background-color: orangered;
+      font-size:25px;
+      
+      
+      
+      
+    }
+    
+    .operbtn{
+      font-size: 25px;
+      color:#5FDC05;
+    }
+    
+    .numbtn{
+      color:#ffffff;
+      font-size: 25px
+      
+    }
+    
+    .spcbtn{
+      color:#49ADF2;
+      font-size: 25px;
+      background-color:#FBE303
+      }
+    
+    .dotbtn{
+      color:#FF9E23 ;
+      font-size:25px;
+    }
+    
+    
+    
+    .dangbtn{
+      color:#FF5BE2;
+      font-size: 25px;
+    
+    }
+    
+    
+    
+
+    
+    #a{
+      color: #D2D6FF;
+      font-size: 20px
+    }
+    
+    #shadowcalci{
+      font-size:12px;
+      color: #FF0808;
+      background-color: #03FEFF
+    }
+    
+    
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div class="calculator">
+    <input type="text" id="a" placeholder="0">
+    
+    <div>
+      <button onclick="take(1)" class="numbtn">1</button>
+      <button onclick="take(2)" class="numbtn">2</button>
+      <button onclick="take(3)" class="numbtn">3</button>
+      <button onclick="take('+')" class="operbtn">+</button>
+      
+        <button id="shadowcalci">shadow calci</button>
+      
+    </div>
+    
+     <div>
+       <button onclick="take(4)" class="numbtn">4</button>
+       <button onclick="take(5)" class="numbtn">5</button>
+       <button onclick="take(6)" class="numbtn">6</button>
+       <button onclick="take('-')" class="operbtn">-</button>
+       
+       <button onclick="take('%')" class="dangbtn">%</button>
+       
+       
+     </div>
+     
+      <div>
+        <button onclick="take(7)" class="numbtn">7</button>
+        <button onclick="take(8)" class="numbtn">8</button>
+        <button onclick="take(9)" class="numbtn">9</button>
+        <button onclick="take('*')" class="operbtn">×</button>
+        
+      <button onclick="empty()" class="spcbtn">AC</button>
+        
+        
+        
+        </div>
+      
+       <div>
+         <button onclick="take(0)"class="numbtn">0</button>
+         <button onclick="take('00')" class="numbtn">00</button>
+         
+         <button onclick="take('.')"class="dotbtn">.</button>
+         
+         <button onclick="take('/')" class="operbtn">÷</button>
+         <button onclick="solve()" class="equalbtn" id="equal">=</button>
+         
+         
+       </div>
+       
+       
+       
+  </div>
+  
+  
+  
+  
+  <script src="main.js"></script>
+</body>
+</html>
